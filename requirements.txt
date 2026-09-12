@@ -1,0 +1,13 @@
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+urllib3>=2.0.0
+colorama>=0.4.6
+rich>=13.0.0
+lxml>=4.9.0
+click>=8.1.0
+python-dateutil>=2.8.0
+PyYAML>=6.0.0
+pyfiglet>=1.0.0
+simple-term-menu>=1.6.0
+curl_cffi>=0.15.0
+PySocks>=1.7.1
