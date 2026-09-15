@@ -1,0 +1,44 @@
+# Mapify Configuration File
+# Copy this file to config.yaml and modify as needed
+
+# Crawling settings
+crawler:
+  max_depth: 3           # crawl depth (1-10)
+  delay: 1.0             # seconds between requests
+  include_images: true
+  max_pages: 1000        # maximum pages to crawl
+  timeout: 10            # request timeout in seconds
+  max_workers: 4         # concurrent workers
+
+  # URL filtering
+  strip_queries: true    # remove tracking query params (utm, fbclid, etc.)
+  skip_xenforo_junk: true # skip XenForo/vBulletin/phpBB junk URLs
+  respect_canonical: true # follow <link rel="canonical">
+
+  # Stealth
+  stealth_mode: true     # HTTP/3 + TLS impersonation
+  # user_agent: "Custom UA String"  # override browser UA
+
+  # Proxy (single)
+  # proxy: "http://127.0.0.1:8080"
+  # proxy: "socks5://127.0.0.1:1080"
+
+# Output settings
+output:
+  directory: "output"
+  format: ["xml", "json"]
+  include_images_sitemap: true
+
+# SEO analysis settings
+seo:
+  analyze_titles: true
+  analyze_meta_descriptions: true
+  analyze_headers: true
+  analyze_images: true
+  analyze_links: true
+
+# Logging
+logging:
+  level: "INFO"          # DEBUG, INFO, WARNING, ERROR
+  file: "mapify.log"
+  console: true
